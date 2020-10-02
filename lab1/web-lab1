@@ -1,0 +1,137 @@
+{
+	"info": {
+		"_postman_id": "aa7cc588-1976-4e49-9c1c-2d8ea37804fd",
+		"name": "lab1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Lab1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "8ed37c7b-8b10-490a-992c-37676a83204d",
+						"exec": [
+							"pm.test(\"API returned 1 post, post author & number of total posts on a current blog\", function() {\r",
+							"\tvar jsonData = JSON.parse(responseBody);\r",
+							"\tpm.expect(jsonData.response[0].blog.total_posts).to.eql(1125);\r",
+							"\r",
+							"})\r",
+							"pm.test(\"Headers are as expected\", function() {\r",
+							"    pm.expect(pm.response.headers.get('Content-Type')).to.eql('application/json');\r",
+							"\r",
+							"})\r",
+							"pm.test(\"Response time is ok\", function() {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(500)\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "api.tumblr.com/v2/blog/ingapinga666/posts?api_key=KNhhpA2ptsGglPrrdcWtTf4sjXPUViBuaUA4kc8i7BKNT6rxWf&id=614086565519605760",
+					"host": [
+						"api",
+						"tumblr",
+						"com"
+					],
+					"path": [
+						"v2",
+						"blog",
+						"ingapinga666",
+						"posts"
+					],
+					"query": [
+						{
+							"key": "api_key",
+							"value": "KNhhpA2ptsGglPrrdcWtTf4sjXPUViBuaUA4kc8i7BKNT6rxWf"
+						},
+						{
+							"key": "id",
+							"value": "614086565519605760",
+							"description": "ID конкретного поста в блоге"
+						},
+						{
+							"key": "npf",
+							"value": "True",
+							"disabled": true
+						}
+					]
+				},
+				"description": "testing tumblr request"
+			},
+			"response": []
+		},
+		{
+			"name": "Lab1-vers2-shorter_responseTime",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "808c3ea7-f821-4f91-b013-669152506d35",
+						"exec": [
+							"pm.test(\"Timestamp and avatarshaped checked\", function() {\r",
+							"\tvar jsonData = JSON.parse(responseBody);\r",
+							"    pm.expect(jsonData.response.notes[0].timestamp).to.eql(1601673369);\r",
+							"    pm.expect(jsonData.response.notes[0].avatar_shape).to.eql(\"circle\");\r",
+							"\r",
+							"})\r",
+							"pm.test(\"Headers are as expected\", function() {\r",
+							"    pm.expect(pm.response.headers.get('Content-Type')).to.eql('application/json; charset=utf-8');\r",
+							"\r",
+							"})\r",
+							"pm.test(\"Response time is ok\", function() {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(600)\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "api.tumblr.com/v2/blog/ingapinga666.tumblr.com/notes?api_key=KNhhpA2ptsGglPrrdcWtTf4sjXPUViBuaUA4kc8i7BKNT6rxWf&id=630900206923284480&mode=likes",
+					"host": [
+						"api",
+						"tumblr",
+						"com"
+					],
+					"path": [
+						"v2",
+						"blog",
+						"ingapinga666.tumblr.com",
+						"notes"
+					],
+					"query": [
+						{
+							"key": "api_key",
+							"value": "KNhhpA2ptsGglPrrdcWtTf4sjXPUViBuaUA4kc8i7BKNT6rxWf"
+						},
+						{
+							"key": "id",
+							"value": "630900206923284480"
+						},
+						{
+							"key": "mode",
+							"value": "likes"
+						},
+						{
+							"key": "before_timestamp",
+							"value": "1601673370",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
