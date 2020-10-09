@@ -15,15 +15,16 @@
 						"exec": [
 							"pm.test(\"API returned 1 post, post author & number of total posts on a current blog\", function() {\r",
 							"\tvar jsonData = JSON.parse(responseBody);\r",
-							"\tpm.expect(jsonData.response[0].blog.total_posts).to.eql(1125);\r",
+							"    pm.expect(jsonData.response.total_posts).to.eql(1);\r",
+							"    pm.expect(jsonData.response.posts[0].trail[0].blog.name).to.eql(\"thrussy\");\r",
+							"\tpm.expect(jsonData.response.blog.total_posts).to.eql(1126);\r",
 							"\r",
 							"})\r",
 							"pm.test(\"Headers are as expected\", function() {\r",
-							"    pm.expect(pm.response.headers.get('Content-Type')).to.eql('application/json');\r",
-							"\r",
+							"    pm.expect(pm.response.headers.get('Content-Type')).to.eql('application/json; charset=utf-8');\r",
 							"})\r",
 							"pm.test(\"Response time is ok\", function() {\r",
-							"    pm.expect(pm.response.responseTime).to.be.below(500)\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(800)\r",
 							"})"
 						],
 						"type": "text/javascript"
