@@ -1,0 +1,65 @@
+[
+    {
+        "product_name": "Коробка для кошки",
+        "product_price": "500",
+        "product_description": "Уютная коробка для домашник любимцев",
+        "product_img": "img/box-for-a-cat.jpg",
+        "product_available": "no"
+    },
+    {
+        "product_name": "Камень",
+        "product_price": "100",
+        "product_description": "Хорошо помещается в руку, можно кинуть",
+        "product_img": "img/rock.jpg",
+        "product_available": "yes"
+    },
+    {
+        "product_name": "Коробка с человеком",
+        "product_price": "25",
+        "product_description": "Подобрали на помойке",
+        "product_img": "img/box-with-human.jpg",
+        "product_available": "yes"
+    },
+    {
+        "product_name": "Зубы",
+        "product_price": "250",
+        "product_description": "К̷͉̃а̷̬̇к̴̮͐ ̵̯̃с̴̙̀ӑ̷̫м̶̙͋ ̴̞͂С̵̣̅ь̷͔̏я̵̟̆н̵̘͝о̷͎̽в̴͖̋ ̷̗̆з̶̖́а̵͚͆в̴̜͐е̶̗͌щ̴̄͜ӑ̶͎л̴̻̃<",
+        "product_img": "img/teeth.jpg",
+        "product_available": "yes"
+    },
+    {
+        "product_name": "Снежинка",
+        "product_price": "70",
+        "product_description": "Красивая",
+        "product_img": "img/snowflake.jpg",
+        "product_available": "no"
+    },
+    {
+        "product_name": "Люди",
+        "product_price": "66",
+        "product_description": "Нам такие не очень нужны",
+        "product_img": "img/people.jpg",
+        "product_available": "yes"
+    },
+    {
+        "product_name": "Большая куча мусора",
+        "product_price": "1000",
+        "product_description": "Пахнет мусором",
+        "product_img": "img/big-trash-pile.jpg",
+        "product_available": "yes"
+    },
+    {
+        "product_name": "Маленькая куча мусора",
+        "product_price": "300",
+        "product_description": "Маленькая куча мусора",
+        "product_img": "img/small-trash-pile.jpg",
+        "product_available": "no"
+    },
+    {
+        "product_name": "Куча симпатичного мусора",
+        "product_price": "666",
+        "product_description": "Блестит. Очень goblincore",
+        "product_img": "img/aestetic-trash-pile.jpg",
+        "product_available": "yes"
+    }
+]
